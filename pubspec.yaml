@@ -1,6 +1,6 @@
 name: aws_s3_private_flutter
-description: A new Flutter plugin.
-version: 0.0.2
+description: The AWS S3 Private Bucket Object Plugin enables developers to access objects stored in private S3 buckets using AWS SDK for authentication and encryption.
+version: 0.0.3
 repository: 'https://github.com/mtzinfotech/aws_s3_private_flutter'
 
 environment:
