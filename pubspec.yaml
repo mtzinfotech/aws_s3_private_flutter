@@ -1,7 +1,7 @@
 name: aws_s3_private_flutter
-description: A new Flutter project.
-version: 0.0.1
-repository: 'https://github.com/mtzinfotech/aws_s3_flutter'
+description: A new Flutter plugin.
+version: 0.0.2
+repository: 'https://github.com/mtzinfotech/aws_s3_private_flutter'
 
 environment:
   sdk: '>=2.18.4 <3.0.0'
