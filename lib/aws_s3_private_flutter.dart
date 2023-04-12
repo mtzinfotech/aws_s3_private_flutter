@@ -23,11 +23,11 @@ class AwsS3PrivateFlutter {
   /// @param [bucketId] The bucketId is not required for web request.
   AwsS3PrivateFlutter(
       {required String secretKey,
-        required String accessKey,
-        String? bucketId,
-        required String? host,
-        required String region,
-        String? sessionToken})
+      required String accessKey,
+      String? bucketId,
+      required String? host,
+      required String region,
+      String? sessionToken})
       : _accessKey = accessKey,
         _secretKey = secretKey,
         _host = host ?? "s3.$region.amazonaws.com",
@@ -38,12 +38,12 @@ class AwsS3PrivateFlutter {
   _SignedRequestParams _buildSignedGetParams(
       {required String key, Map<String, String>? queryParams}) {
     final unEncodedPath =
-    (_bucketId != null || _bucketId!.isNotEmpty) ? "$_bucketId/$key" : key;
+        (_bucketId != null || _bucketId!.isNotEmpty) ? "$_bucketId/$key" : key;
     final uri = Uri.https(_host, unEncodedPath, queryParams);
     final payload = _SigV4._hashCanonicalRequest('');
     final datetime = _SigV4._generateDatetime();
     final credentialScope =
-    _SigV4._buildCredentialScope(datetime, _region, _service);
+        _SigV4._buildCredentialScope(datetime, _region, _service);
     final canonicalQuery = _SigV4._buildCanonicalQueryString(queryParams);
     final canonicalRequest = '''GET
 ${'/$unEncodedPath'.split('/').map(Uri.encodeComponent).join('/')}
@@ -59,7 +59,7 @@ $payload''';
     final stringToSign = _SigV4._buildStringToSign(datetime, credentialScope,
         _SigV4._hashCanonicalRequest(canonicalRequest));
     final signingKey =
-    _SigV4._calculateSigningKey(_secretKey, datetime, _region, _service);
+        _SigV4._calculateSigningKey(_secretKey, datetime, _region, _service);
     final signature = _SigV4._calculateSignature(signingKey, stringToSign);
 
     final authorization = [

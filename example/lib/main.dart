@@ -103,15 +103,16 @@ class _MyAppState extends State<MyApp> {
           const SizedBox(height: 10),
           GestureDetector(
             onTap: () async {
-              final AwsS3PrivateFlutter awsS3PrivateFlutter = AwsS3PrivateFlutter(
-                  region: region.text,
-                  accessKey: accessKey.text,
-                  secretKey: secretKey.text,
-                  host: host.text,
-                  bucketId: bucketId.text);
+              final AwsS3PrivateFlutter awsS3PrivateFlutter =
+                  AwsS3PrivateFlutter(
+                      region: region.text,
+                      accessKey: accessKey.text,
+                      secretKey: secretKey.text,
+                      host: host.text,
+                      bucketId: bucketId.text);
               setState(() async {
-                response =
-                    await awsS3PrivateFlutter.getObjectWithSignedRequest(key: url.text);
+                response = await awsS3PrivateFlutter.getObjectWithSignedRequest(
+                    key: url.text);
                 if (response!.statusCode == 200) {
                   debugPrint('${response!.statusCode}');
                 }
