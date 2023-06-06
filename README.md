@@ -22,9 +22,9 @@ import 'package:aws_s3_private_flutter/aws_s3_private_flutter.dart';
 <img src="https://github.com/mtzinfotech/aws_s3_private_flutter/blob/main/images/screen_shot_1.JPEG" alt="alt text" width="300" height="620">
 <img src="https://github.com/mtzinfotech/aws_s3_private_flutter/blob/main/images/screen_shot_2.JPEG" alt="alt text" width="300" height="620">
 
-| Platform  | Android | IOS   | Web  |
-|-----------|---------|-------|------|
-| Supported | ✅️️     | ✅️    | ✅️   |
+| Platform  | Android |  IOS  |  Web  |
+|-----------|---------|-------|-------|
+| Supported |    ✅️️   |   ✅️  |  ✅️   |
 
 ## Available Parameters
 
