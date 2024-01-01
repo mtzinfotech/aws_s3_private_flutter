@@ -74,7 +74,7 @@ final AwsS3PrivateFlutter awsS3PrivateFlutter = AwsS3PrivateFlutter(
     region: 'your-region-here',
     /// example host: '[bucket-id].s3.[region].amazonaws.com' 
     host: 'your-host-here',
-    /// [bucketId] is not required if buckedId is already available in your [host].
+    /// [bucketId] is not required if bucketId is already available in your [host].
     bucketId: 'your-bucket-id');
 
 getObject() async {
