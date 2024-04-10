@@ -140,10 +140,10 @@ class _SigV4 {
     sortedQueryParams.sort();
 
     final canonicalQueryStrings = [];
-    sortedQueryParams.forEach((key) {
+    for (var key in sortedQueryParams) {
       canonicalQueryStrings.add(
           '$key=${Uri.encodeQueryComponent(queryParams[key]!).replaceAll('+', "%20")}');
-    });
+    }
 
     return canonicalQueryStrings.join('&');
   }
